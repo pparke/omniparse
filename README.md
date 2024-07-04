@@ -247,14 +247,14 @@ curl -X POST -F "file=@/path/to/audio.mp3" http://localhost:8000/parse_media/aud
 
 #### Parse Website
 
-Endpoint: `/parse_website`
+Endpoint: `/parse_website/parse`
 Method: POST
 
 Parses a website given its URL.
 
 Curl command:
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"url": "https://example.com"}' http://localhost:8000/parse_website
+curl -X POST http://localhost:8000/parse_website/parse?url=https://example.com
 ```
 Arguments:
 - `url`: The URL of the website to parse
